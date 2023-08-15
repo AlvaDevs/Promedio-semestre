@@ -1,14 +1,40 @@
-//
-//  main.cpp
-//  Promedio semestre
-//
-//  Created by Hope Alvarez on 15/08/23.
-//
+/*
+    Programa: Bucles - Semana #3
+    ID Autor: T00070257
+    Nombre Autor: Álvaro José Álvarez Puello
+    Fecha: 15-08-23
+*/
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+//  Función
+double cPromedio(int tCreditos, float tcMaterias) {
+    double resultado = tcMaterias / tCreditos;
+     
+    return resultado;
+}
+
+int main() {
+    char x = 's';
+//    ¿Continuar?
+    do {
+        int materias, creditos, tCreditos;
+        float cMaterias, tCMaterias;
+        
+        cin >> materias;
+        
+        for (int i = 1; i <= materias; i++) {
+            cin >> creditos;
+            
+            cin >> cMaterias;
+        }
+        
+        
+        cout << "!Perfecto! ¿Te gustaría volver a utilizar el programa? (S/N): ";
+        cin >> x;
+    } while (x == 's' || x == 'S');
+    
     return 0;
 }
